@@ -1,0 +1,11 @@
+---
+description: Rules for the Influencer Search and Analysis project
+globs: "**/*.py"
+alwaysApply: true
+---
+
+# Influencer Project Standards
+- **Security**: Never hardcode API keys. Use `os.getenv` to pull `APIFY_API_TOKEN` and `OPENAI_API_KEY` from the `.env` file.
+- **Tech Stack**: Always use `streamlit` for the UI and `apify-client` for scraping logic.
+- **Data Handling**: Automatically deduplicate influencers by their `authorMeta.name` or `id` before displaying results.
+- **UI Style**: Use a modern card-based grid layout with `st.columns` and `st.image`.

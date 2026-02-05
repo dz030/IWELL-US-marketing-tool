@@ -1,0 +1,11 @@
+---
+description: Influencer search and analysis project rules
+globs: **/*
+alwaysApply: true
+---
+
+# Influencer Project Standards
+- **API Management:** Use `os.getenv` to pull `APIFY_API_TOKEN` and `OPENAI_API_KEY` from the `.env` file. Never hardcode keys.
+- **Tech Stack:** Use `streamlit` for the UI and `apify-client` for all scraping logic.
+- **Deduplication:** Always deduplicate influencers by their `authorMeta.name` or `id` before displaying.
+- **UI Style:** Create a card-based grid layout using `st.columns` and `st.image` for a visual search engine vibe.

@@ -1,0 +1,6 @@
+streamlit
+apify-client
+python-dotenv
+gspread
+google-auth
+streamlit-option-menu
