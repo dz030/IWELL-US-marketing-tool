@@ -804,6 +804,7 @@ def filter_dialog():
     )
     
     st.subheader("Follower Range")
+    st.markdown("*Use follower range after search hashtag")
     
     # Define follower range options (0 = no min, 999999999 = no max)
     NO_MIN = 0
