@@ -21,7 +21,7 @@ import pandas as pd
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # Google Sheets Setup constants
-SHEET_ID = "1W_83yf7dmweakcesiz8Nz27qGlnPIL2XCoBJgxKuOPg"
+SHEET_ID = "1yCmsXkTgNVvxAXFa_ZpLLXWNOZgDipVEoT4rXOD4HmY"
 SCOPE = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
 
 # --- NEW CLOUD-READY AUTH LOGIC ---
