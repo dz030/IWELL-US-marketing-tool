@@ -787,19 +787,14 @@ def filter_dialog():
         help="Enter one or more TikTok hashtags separated by commas (without #)"
     )
     
-# Updated Results Limit with Guardrails
-results_limit = st.number_input(
-    "Results Limit (Demo)",
-    min_value=1,
-    max_value=3,  # Set the hard cap to 3 here
-    value=min(st.session_state.get('results_limit', 3), 3), # Ensure default doesn't exceed 3
-    step=1,
-    help="Demo: search is limited to 3 results to save API costs."
-)
-
-# Show a message if they are at the limit
-if results_limit >= 3:
-    st.info("💡Note: This demo is intentionally capped at 3 results per query to optimize API usage.")
+    results_limit = st.number_input(
+        "Results Limit",
+        min_value=1,
+        max_value=3,
+        value=st.session_state.get('results_limit', 3),
+        step=1,
+        help="Maximum number of results to fetch (affects both resultsLimit and resultsPerPage)"
+    )
     
     st.subheader("Location")
     location_filter = st.selectbox(
