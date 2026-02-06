@@ -1451,7 +1451,7 @@ def send_bulk_email_dialog(selected_data: List[Dict[str, Any]], campaign_name: s
         # Template source selection
         template_source = st.selectbox(
             "Template Source",
-            options=["Internal Template", "Global Template"],
+            options=["Global Template", "Internal Template"],
             index=0,  # Default to Internal Template
             key="template_source_select"
         )
