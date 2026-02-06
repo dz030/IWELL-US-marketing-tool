@@ -791,11 +791,11 @@ def filter_dialog():
         "Results Limit",
         min_value=1,
         max_value=3,
-        value=st.session_state.get('results_limit', 3),
+        value=3,
         step=1,
-        help="Maximum number of results to fetch (affects both resultsLimit and resultsPerPage)"
+        help="Demo: search is limited to 3 results to save API costs"
     )
-    
+
     st.subheader("Location")
     location_filter = st.selectbox(
         "Location",
