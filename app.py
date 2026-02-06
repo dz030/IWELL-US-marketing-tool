@@ -783,7 +783,7 @@ def filter_dialog():
     hashtag = st.text_input(
         "Hashtag(s)",
         value=st.session_state.get('hashtag', ''),
-        placeholder="e.g., travel, fitness, food",
+        placeholder="e.g., hairtok, makeup, beauty",
         help="Enter one or more TikTok hashtags separated by commas (without #)"
     )
     
@@ -1565,7 +1565,7 @@ def copy_dm_dialog(selected_data: List[Dict[str, Any]], campaign_name: str):
         # Template source selection
         template_source = st.selectbox(
             "Template Source",
-            options=["Internal Template", "Global Template"],
+            options=["Global Template", "Internal Template"],
             index=0,  # Default to Internal Template
             key="copy_dm_template_source_select"
         )
