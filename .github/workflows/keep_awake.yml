@@ -1,0 +1,23 @@
+name: Keep App Awake
+on:
+  schedule:
+    - cron: "0 */5 * * *"
+  workflow_dispatch:
+
+jobs:
+  keep_awake:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # This explicitly grants write access
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true # Ensures the token stays active
+
+      - name: Dummy Commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit --allow-empty -m "Heartbeat to keep Streamlit awake"
+          git push
